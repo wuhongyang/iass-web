@@ -1,0 +1,46 @@
+﻿Build started 2014/9/10 12:24:59.
+     1>Project "G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\hsflowd\hsflowd.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\..\sflow /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D VERSION_MAJOR=1 /D VERSION_MINOR=23 /D VERSION_REVISION=3 /D _USING_V110_SDK71_ /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"Win32\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt hsflowconfig.c hsflowd.c loadAverage.c readCpuCounters.c readDiskCounters.c readHidCounters.c readInterfaces.c readMemoryCounters.c readNioCounters.c readSystemUUID.c readWindowsCounters.c ..\..\..\sflow\sflow_agent.c ..\..\..\sflow\sflow_poller.c ..\..\..\sflow\sflow_receiver.c ..\..\..\sflow\sflow_sampler.c util.c
+         hsflowconfig.c
+         hsflowd.c
+         loadAverage.c
+         readCpuCounters.c
+         readDiskCounters.c
+         readHidCounters.c
+         readInterfaces.c
+         readMemoryCounters.c
+         readNioCounters.c
+         readSystemUUID.c
+         readWindowsCounters.c
+         sflow_agent.c
+         sflow_poller.c
+         sflow_receiver.c
+         sflow_sampler.c
+         util.c
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\hsflowd.exe" /INCREMENTAL:NO /NOLOGO Ws2_32.lib IPHLPAPI.lib pdh.lib Wbemuuid.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\hsflowd.pdb" /SUBSYSTEM:CONSOLE,"5.01" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\hsflowd.lib" /MACHINE:X86 /SAFESEH Win32\Release\hsflowd.res
+         Win32\Release\hsflowconfig.obj
+         Win32\Release\hsflowd.obj
+         Win32\Release\loadAverage.obj
+         Win32\Release\readCpuCounters.obj
+         Win32\Release\readDiskCounters.obj
+         Win32\Release\readHidCounters.obj
+         Win32\Release\readInterfaces.obj
+         Win32\Release\readMemoryCounters.obj
+         Win32\Release\readNioCounters.obj
+         Win32\Release\readSystemUUID.obj
+         Win32\Release\readWindowsCounters.obj
+         Win32\Release\sflow_agent.obj
+         Win32\Release\sflow_poller.obj
+         Win32\Release\sflow_receiver.obj
+         Win32\Release\sflow_sampler.obj
+         Win32\Release\util.obj
+         Generating code
+         Finished generating code
+         hsflowd.vcxproj -> G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\hsflowd.exe
+     1>Done Building Project "G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\hsflowd\hsflowd.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.93

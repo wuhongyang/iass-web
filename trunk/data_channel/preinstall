@@ -1,0 +1,7 @@
+apt-get install python-rrdtool
+apt-get install libapache2-mod-wsgi
+apt-get install python-mysqldb
+pip install django
+pip install djangorestframework
+
+

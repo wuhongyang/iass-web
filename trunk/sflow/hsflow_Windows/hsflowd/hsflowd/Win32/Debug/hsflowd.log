@@ -1,0 +1,61 @@
+﻿Build started 2014/9/4 16:48:36.
+     1>Project "G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\Windows\hsflowd\hsflowd.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\sflow /I"..\switch-extension" /ZI /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D VERSION_MAJOR=1 /D VERSION_MINOR=23 /D VERSION_REVISION=4 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt hypervSwitch.c hypervUtil.c hypervVm.c readPackets.c readWindowsEnglishCounters.c .\dnsSD.c xmlUtil.cpp hsflowconfig.c hsflowd.c loadAverage.c readCpuCounters.c readDiskCounters.c readHidCounters.c readInterfaces.c readMemoryCounters.c readNioCounters.c readSystemUUID.c ..\..\sflow\sflow_agent.c ..\..\sflow\sflow_poller.c ..\..\sflow\sflow_receiver.c ..\..\sflow\sflow_sampler.c util.c
+         util.c
+         sflow_sampler.c
+         sflow_receiver.c
+         sflow_poller.c
+         sflow_agent.c
+         readSystemUUID.c
+         readNioCounters.c
+         readMemoryCounters.c
+         readInterfaces.c
+         readHidCounters.c
+         readDiskCounters.c
+         readCpuCounters.c
+         loadAverage.c
+         hsflowd.c
+         hsflowconfig.c
+         xmlUtil.cpp
+         dnsSD.c
+         readWindowsEnglishCounters.c
+         readPackets.c
+         hypervVm.c
+         Generating Code...
+         Compiling...
+         hypervUtil.c
+         hypervSwitch.c
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D VERSION_MAJOR=1 /D VERSION_MINOR=23 /D VERSION_REVISION=4 /l"0x0409" /nologo /fo"Win32\Debug\hsflowd.res" hsflowd.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\Windows\build\hsflowd.exe" /INCREMENTAL /NOLOGO Ws2_32.lib IPHLPAPI.lib pdh.lib Wbemuuid.lib xmllite.lib Shlwapi.lib Normaliz.lib VirtDisk.lib Ntdll.lib DnsAPI.lib KtmW32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\Windows\build\hsflowd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\Windows\build\hsflowd.lib" /MACHINE:X86 /SAFESEH:NO Win32\Debug\hsflowd.res
+         Win32\Debug\hypervSwitch.obj
+         Win32\Debug\hypervUtil.obj
+         Win32\Debug\hypervVm.obj
+         Win32\Debug\readPackets.obj
+         Win32\Debug\readWindowsEnglishCounters.obj
+         Win32\Debug\dnsSD.obj
+         Win32\Debug\xmlUtil.obj
+         Win32\Debug\hsflowconfig.obj
+         Win32\Debug\hsflowd.obj
+         Win32\Debug\loadAverage.obj
+         Win32\Debug\readCpuCounters.obj
+         Win32\Debug\readDiskCounters.obj
+         Win32\Debug\readHidCounters.obj
+         Win32\Debug\readInterfaces.obj
+         Win32\Debug\readMemoryCounters.obj
+         Win32\Debug\readNioCounters.obj
+         Win32\Debug\readSystemUUID.obj
+         Win32\Debug\sflow_agent.obj
+         Win32\Debug\sflow_poller.obj
+         Win32\Debug\sflow_receiver.obj
+         Win32\Debug\sflow_sampler.obj
+         Win32\Debug\util.obj
+         hsflowd.vcxproj -> G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\Windows\build\hsflowd.exe
+     1>Done Building Project "G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\Windows\hsflowd\hsflowd.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:01.00

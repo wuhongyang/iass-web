@@ -1,0 +1,134 @@
+#!/bin/bash
+
+#=============================================================================
+#  Author:      mahaojing
+#  Email:       mhjlq1989@gmail.com
+#  Create Date:    
+#  Version:         
+#  LastChange:   
+#  Description: start or stop ProxyAgent script
+#  History:         
+#=============================================================================
+export LANG=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LANGUAGE=en_US:en
+EXECPATH=`dirname $0`
+PIDFILE=/var/run/gmond-server.pid
+PROGRAM="python $EXECPATH/gmond-server.py -p /var/run/gmond-server.pid"
+EXECNAME=$0
+COMMAND=$1
+
+#if [ "`whoami`" != "root" ];then
+#    echo "must use root to run!"
+#    exit 1
+#fi
+
+isrunning() {
+  if [ -f "$PIDFILE" ]
+  then
+    kill -0 `cat $PIDFILE` >/dev/null 2>&1 
+    if [ "$?" -eq 0 ]
+    then
+      return 0
+    fi
+  fi 
+  return 1
+}
+
+start_prog() {
+  isrunning
+  if [ "$?" -eq 0 ]
+  then
+    echo already is running, pid is `cat $PIDFILE` 
+    return 0
+  fi
+  nohup python $EXECPATH/gmond-server.py -p /var/run/gmond-server.pid 2>&1 >/dev/null &
+}
+
+stop_prog() {
+  PID=`cat $PIDFILE 2>/dev/null`
+  SIG=''
+  isrunning
+  retcode=$?
+  if [ "$retcode" -ne 0 ]
+  then
+    echo already is not running!
+    return 0
+  fi
+  cnt=0 
+  while [ "$retcode" -eq 0 ]
+  do
+    if [ "$cnt" -gt 0 ]
+    then
+      echo -n "."   
+      sleep 1
+    fi
+    cnt=$((cnt+1))
+    if [ "$cnt" -gt 10 ]
+    then
+      SIG="-9"
+    fi
+    kill $SIG $PID >/dev/null 2>&1 
+    retcode=$?
+  done 
+
+  if [ -f "$PIDFILE" ]
+  then
+    /bin/rm $PIDFILE
+  fi
+}
+
+status_prog() {
+  if [ -f "$PIDFILE" ]
+  then
+    PID=`cat $PIDFILE`
+    kill -0 $PID
+    if [ "$?" -eq 0 ]
+    then
+      echo "pid $PID is running."
+    else 
+      echo stoped, but pid file $PIDFILE  exists.
+      exit 1
+    fi
+  else
+    echo stoped.
+    exit 1
+  fi 
+}
+
+help_prog() {
+  echo "Usage:"
+  echo "  $EXECNAME start|stop|restart|status --options"
+}
+
+if [ "$#" -lt 1 ]
+then
+  help_prog
+  exit 0
+fi
+
+shift
+case $COMMAND in
+  start)
+    start_prog $@
+    ;;
+  stop)
+    stop_prog
+    ;;
+  restart)
+    stop_prog
+    start_prog
+    ;;
+  status)
+    status_prog
+    ;;
+  help)
+    help_prog
+    ;;
+  (*) 
+    echo "$exec: error - unrecognized command $COMMAND" 1>&2
+    help
+    exit 1
+    ;;
+esac
+

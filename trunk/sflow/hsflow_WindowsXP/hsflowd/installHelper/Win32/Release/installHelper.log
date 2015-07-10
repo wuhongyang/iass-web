@@ -1,0 +1,19 @@
+﻿Build started 2014/9/9 20:12:44.
+     1>Project "G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\installHelper\installHelper.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D INSTALLHELPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32\Release\\" /Fd"Win32\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt installHelper.cpp
+         installHelper.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D VERSION_MAJOR=1 /D VERSION_MINOR=23 /D VERSION_REVISION=3 /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Win32\Release\version.res" version.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\installHelper.dll" /INCREMENTAL:NO /NOLOGO msi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\installHelper.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\installHelper.lib" /MACHINE:X86 /SAFESEH /DLL Win32\Release\version.res
+         Win32\Release\installHelper.obj
+            Creating library G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\installHelper.lib and object G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\installHelper.exp
+         Generating code
+         Finished generating code
+         installHelper.vcxproj -> G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\build\installHelper.dll
+     1>Done Building Project "G:\work file\sflow\hsflowd-1_26_0\hsflowd-1_26_0\src\WindowsXP\hsflowd\installHelper\installHelper.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.03
